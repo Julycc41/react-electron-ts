@@ -19,12 +19,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "ele": "electron ." 
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "main": "main.ts",
-  "homepage":".",
   "eslintConfig": {
     "extends": [
       "react-app",

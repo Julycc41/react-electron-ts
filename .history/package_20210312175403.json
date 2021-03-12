@@ -23,7 +23,7 @@
     "eject": "react-scripts eject",
     "ele": "electron ." 
   },
-  "main": "main.ts",
+  "main": "main.js",
   "homepage":".",
   "eslintConfig": {
     "extends": [
