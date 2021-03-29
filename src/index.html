@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const list = [
+      {
+        name: "从萨达",
+        wayPointGroups: [
+          {
+            id: 1,
+            type: "19"
+          },
+          {
+            id: 1,
+            type: "19"
+          },
+          {
+            id: 2,
+            type: "19"
+          },
+          {
+            id: 3,
+            type: "19"
+          },
+          {
+            id: 2,
+            type: "19"
+          },
+          {
+            id: 3,
+            type: "19"
+          },
+          {
+            id: 1,
+            type: "19"
+          }
+        ]
+      },
+      {
+        name: "从萨达e3",
+        wayPointGroups: [
+          {
+            id: 1,
+            type: "19"
+          },
+          {
+            id: 4,
+            type: "19"
+          },
+          {
+            id: 2,
+            type: "19"
+          },
+          {
+            id: 5,
+            type: "19"
+          },
+          {
+            id: 2,
+            type: "19"
+          },
+          {
+            id: 3,
+            type: "19"
+          },
+          {
+            id: 1,
+            type: "19"
+          }
+        ]
+      }
+    ]
+    //最后的数据
+    const newList = [
+      {
+        id: 1,
+        type: "19"
+      },
+      {
+        id: 3,
+        type: "19"
+      },
+      {
+        id: 2,
+        type: "19"
+      },
+      {
+        id: 4,
+        type: "19"
+      },
+      {
+        id: 5,
+        type: "19"
+      },
+    ]
+     // 方法1
+     const data = {}
+      list.forEach(item=>{
+        item.wayPointGroups.forEach(child=>{
+          console.log(child)
+          data[child.id] = child
+        })
+      })
+      console.log('child...',Object.keys(data).map(v=>data[v]))
+
+
+      // 方法2
+      const arr = []
+      list.forEach(item=>{
+        item.wayPointGroups.forEach(child=>{
+          const isHas = arr.findIndex(v=>+v.id === +child.id)
+          if(isHas < 0){
+            arr.push(child)
+          }
+        })
+      })
+      console.log(arr)
+ 
+ </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+/* flex定义布局 */
+
+.flex {
+  display: flex;
+}
+
+/* 垂直排列 */
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 水平排列 */
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 水平排列 主轴为水平方向，起点在右端*/
+
+.flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/*  水平居中 */
+
+.flex-justify {
+  display: flex;
+  justify-content: center;
+}
+
+/*  水平居右 */
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*  底部对齐 */
+.align-items-flex-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* 垂直居中 */
+
+.flex-align {
+  display: flex;
+  align-items: center;
+}
+
+/* 水平垂直居中 */
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 内容先左右对齐*/
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 换行排列 */
+.flex-wrap{
+  display: flex;
+  flex-wrap:wrap;
+}
+
+/* 垂直右排列-方向下沿 */
+
+.flex-column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* 垂直右排列-方向上沿 */
+
+.flex-column-column {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content:flex-end;
+}
+
+
+/* 每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。*/
+
+.flex-space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* 多个列表自动换行排列 */
+.flex-item-wrap{
+  display: -webkit-flex;
+  /* justify-content: space-between; */
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+// 一行显示不下省略号代替
+.one-show{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,19 @@
+.get-image-wrapper{
+  width: 500px;
+  padding: 20px;
+  .waypoint-title
+  ,.get-waypoint-list,
+  .waypoint-image{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .more-waypoint-image{
+    margin: 10px;
+  }
+  img{
+    width: 100px;
+    margin-left: 50px;
+    height: 100px;
+  }
+}

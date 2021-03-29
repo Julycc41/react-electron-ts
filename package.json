@@ -21,10 +21,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "ele": "electron ." 
+    "ele": "electron ."
   },
   "main": "main.ts",
-  "homepage":".",
+  "homepage": ".",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -44,6 +44,10 @@
     ]
   },
   "devDependencies": {
-    "electron": "^12.0.1"
+    "dotenv-cli": "^4.0.0",
+    "electron": "^12.0.1",
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.2.2",
+    "node-sass": "^5.0.0"
   }
 }

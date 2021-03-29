@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const a = [
+      {
+        startTime: "2021-03-21 18:16:07",
+        endTime: null
+      },
+      {
+        startTime: "2021-03-22 18:16:07",
+        endTime: "2021-03-22 18:16:22"
+      },
+      {
+        startTime: "2021-03-03 22:16:07",
+        endTime: "2021-03-03 22:16:37"
+      },
+      {
+        startTime: "2021-03-21 18:16:07",
+        endTime: null
+      },
+      {
+        startTime: "2021-03-21 18:16:07",
+        endTime: null
+      }
+    ]
+    function getTime(a) {
+      let count = 0
+      a.map((item) => {
+        if (item.endTime&&item.startTime) {
+          let s = new Date(item.startTime).getTime() + new Date(item.endTime).getTime()
+          count += s
+        }
+      })
+     console.log( toHHmmss(count))
+    }
+    getTime(a)
+    function toHHmmss(data) {
+      var time;
+      var hours = parseInt((data % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = parseInt((data % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = (data % (1000 * 60)) / 1000;
+      time = (hours < 10 ? ('0' + hours) : hours) + ':' + (minutes < 10 ? ('0' + minutes) : minutes) + ':' + (seconds < 10 ? ('0' + seconds) : seconds);
+      return time;
+    }
+
+  </script>
+</body>
+
+</html>

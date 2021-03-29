@@ -1,0 +1,95 @@
+.real-time-control-wrapper{
+  position: absolute;
+  right: 0px;
+  top:75px;
+  padding: 10px;
+  width: 300px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  .current-live {
+    height: 260px;
+    width: 100%;
+
+    .drone-live-contents {
+      margin-top: 10px;
+      display: flex;
+      height: 100%;
+    }
+  }
+
+  .control-wrapper {
+    width:100%;
+    overflow: hidden;
+    .control-slider-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 5px;
+      padding:20px;
+      background-color: rgba(26, 26, 26, 0.74);
+    }
+
+    cursor:pointer;
+
+    .control-active {
+      color: #e3c122 !important;
+    }
+
+    .control-direction {
+      display: grid;
+      grid-template-columns: 40px 40px 40px;
+      grid-template-rows: 40px 40px 40px;
+      grid-row-gap: 20px;
+      grid-column-gap: 20px;
+
+      div {
+        border-radius: 5px;
+        line-height: 40px;
+        font-size: 23px;
+        text-align: center;
+        vertical-align: middle;
+        background: #8A8A8A;
+      }
+
+      .icon-zuoshang,
+      .icon-youshang,
+      .icon-107fangxiang_zuoxia,
+      .icon-youxia {
+        color: #666666;
+      }
+    }
+
+    .control-operation {
+      margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      span {
+        border-radius: 50%;
+        background: #8A8A8A;
+        font-size: 30px;
+        margin: 5px;
+        padding: 10px 10px;
+      }
+    }
+
+    .icon-xiangji {
+      position: relative;
+
+      b {
+        padding: 5px;
+        border-radius: 50%;
+        color: #ffffff;
+        background: #e3c122;
+        font-size: 15px;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        min-width: 25px;
+      }
+    }
+
+  }
+}
