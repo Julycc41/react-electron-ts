@@ -1,0 +1,31 @@
+{
+  "appId": "solar_detection_auto",
+  "productName": "无人机智能巡检系统",
+  "copyright": "Copyright © 2020 ${author}",
+  "files": ["dist/**/*", "package.json", "src.ele/*", "main.js", "node_modules/"],
+  "extraResources": [
+    {
+      "from": "addon",
+      "to": "addon"
+    }
+  ],
+  "directories": {
+    "output": "build.ele"
+  },
+  "extends": null,
+  "win": {
+    "target": ["nsis"],
+    "icon": "installer/icon.ico",
+    "artifactName": "${productName}v${version}.${ext}",
+    "publisherName": "boonray"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "perMachine": true,
+    "installerIcon": "installer/icon.ico",
+    "menuCategory": true
+  }
+}

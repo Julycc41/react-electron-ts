@@ -1,0 +1,43 @@
+$barHeight: 32px;
+.window-bar-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  height: $barHeight;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  border-bottom: 0.2px solid rgba(0, 0, 0, 0.1);
+  user-select: none;
+  .title-text {
+    font-size: 14px;
+    height: $barHeight;
+    line-height: $barHeight;
+    padding-left: 15px;
+  }
+  .blank {
+    flex: 1;
+  }
+
+  .kill-zone {
+    display: flex;
+    flex-flow: flex nowrap;
+    align-items: center;
+  }
+}
+
+.kill-zone {
+  display: flex;
+  button {
+    border-radius: 0;
+    transition: none;
+    &:focus {
+      background-color: white;
+    }
+    &:hover {
+      color: white;
+      background-color: rgba(59, 59, 59, 0.486);
+    }
+    &:last-child:hover{
+      background-color: rgba(255, 22, 22, 0.63);
+    }
+  }
+}

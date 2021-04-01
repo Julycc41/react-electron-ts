@@ -97,7 +97,7 @@ export const RealTimeControl = observer(() => {
             {PLANE_CONTROL.map((itemType) => (
               <div
                 className={[
-                  `iconfont icon-${itemType.name}`,
+                  `iconfont icon-${itemType.type}`,
                   itemType.index,
                   currentSelectControl === itemType.index ? "control-active" : "",
                 ].join(" ")}
@@ -110,7 +110,7 @@ export const RealTimeControl = observer(() => {
             {OPERATION_CONTROL.map((itemType) => (
               <span
                 className={[
-                  `iconfont icon-${itemType.name}`,
+                  `iconfont icon-${itemType.type}`,
                   currentSelectControl === itemType.index ? "control-active" : "",
                 ].join(" ")}
                 key={itemType.index}
