@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import GetImage from './component/GetImage';
-import RealTimeControl from './component/RealTimeControl';
 import WindowBar from './component/WindowBar';
 function App() {
   return (
@@ -27,7 +26,7 @@ function App() {
         </a>
       </header> */}
        <WindowBar leftContent="无人机智能巡检系统" />
-      <RealTimeControl></RealTimeControl>
+      {/* <RealTimeControl></RealTimeControl> */}
       <GetImage />
     </div>
   );

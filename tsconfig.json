@@ -18,5 +18,5 @@
     "noFallthroughCasesInSwitch": true
   },
   "exclude": ["node_modules", "build", "build.ele"],
-  "include": ["src"]
+  "include": ["src", ".ice","images.d.ts"],
 }
