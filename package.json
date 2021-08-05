@@ -23,6 +23,7 @@
     "file-saver": "^2.0.5",
     "generate-docx": "^2.1.1",
     "html-docx-js": "^0.3.1",
+    "html2canvas": "^1.2.0",
     "jszip-utils": "^0.1.0",
     "pizzip": "^3.0.6",
     "preact-markup": "^2.1.1",
