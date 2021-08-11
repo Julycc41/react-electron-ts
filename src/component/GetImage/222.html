@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>keyMulSelect</title>
+    <style type="text/css">
+        #main {
+            width: 1150px;
+            height: 780px;
+            border: 1px solid #e7e81a;
+            margin: auto;
+        }
+
+        p {
+            float: left;
+            width: 150px;
+            height: 150px;
+            border: 1px dotted grey;
+            margin: 19px;
+        }
+
+        p[sel = "sel"] {
+            border: 1.8px solid red;
+        }
+    </style>
+
+    <!-- <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.0/jquery.min.js"></script> -->
+    <script type="text/javascript">
+        $(function () {
+            var start = null;
+            $("p").click(function (e) {
+                e = e || event;
+                if (e.shiftKey) {
+                    var si = $(start).index(), ti = $(this).index();
+                    var sel = $("p").slice(Math.min(si, ti), Math.max(si, ti) + 1);
+                    sel.attr("sel", "sel");
+                    $("p").not(sel).removeAttr("sel");
+                    return;
+                }
+                start = this;
+                if ($(this).attr("sel") == "sel") {
+                    $(this).removeAttr("sel");
+                } else {
+                    $(this).attr("sel", "sel");
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+<div id="main">
+    <p><img src="http://avatar.csdn.net/9/F/E/1_yanqinhui.jpg" title="访问我的空间"></p>
+
+    <p><img src="http://avatar.csdn.net/9/F/E/1_yanqinhui.jpg" title="访问我的空间"></p>
+
+    <p><img src="http://avatar.csdn.net/9/F/E/1_yanqinhui.jpg" title="访问我的空间"></p>
+
+    <p><img src="http://avatar.csdn.net/9/F/E/1_yanqinhui.jpg" title="访问我的空间"></p>
+
+    <p><img src="http://avatar.csdn.net/9/F/E/1_yanqinhui.jpg" title="访问我的空间"></p>
+
+    <p><img src="http://avatar.csdn.net/9/F/E/1_yanqinhui.jpg" title="访问我的空间"></p>
+
+    <p><img src="http://avatar.csdn.net/9/F/E/1_yanqinhui.jpg" title="访问我的空间"></p>
+
+    <p><img src="http://avatar.csdn.net/9/F/E/1_yanqinhui.jpg" title="访问我的空间"></p>
+
+    <p><img src="http://avatar.csdn.net/9/F/E/1_yanqinhui.jpg" title="访问我的空间"></p>
+
+    <p><img src="http://avatar.csdn.net/9/F/E/1_yanqinhui.jpg" title="访问我的空间"></p>
+
+    <p><img src="http://avatar.csdn.net/9/F/E/1_yanqinhui.jpg" title="访问我的空间"></p>
+
+    <p><img src="http://avatar.csdn.net/9/F/E/1_yanqinhui.jpg" title="访问我的空间"></p>
+
+    <p><img src="http://avatar.csdn.net/9/F/E/1_yanqinhui.jpg" title="访问我的空间"></p>
+
+    <p><img src="http://avatar.csdn.net/9/F/E/1_yanqinhui.jpg" title="访问我的空间"></p>
+
+    <p><img src="http://avatar.csdn.net/9/F/E/1_yanqinhui.jpg" title="访问我的空间"></p>
+
+    <p><img src="http://avatar.csdn.net/9/F/E/1_yanqinhui.jpg" title="访问我的空间"></p>
+
+    <p><img src="http://avatar.csdn.net/9/F/E/1_yanqinhui.jpg" title="访问我的空间"></p>
+
+    <p><img src="http://avatar.csdn.net/9/F/E/1_yanqinhui.jpg" title="访问我的空间"></p>
+</div>
+</body>
+</html>

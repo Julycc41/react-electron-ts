@@ -1,46 +1,17 @@
-# Getting Started with Create React App
+### 解决图片太多 使用截图工具导致崩溃
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+    1.首先说明一下 报错原因以及之前存在的问题
+        1.1 未达到需求可编辑,
+        1.2 pdf 插件导不出这么长的文件
+    2.更换插件docx
+        2.1 传递数据 找模板生成想要的数据格式
+        2.2 数据格式未有canvas+image 生成
+    3. docx遇到的问题
+        3.1 原有缺陷是将image+canvas 完成的渲染 所以还是需要用到截图工具只是截图的是单个defectItem dom 存放在数组里面进行 转为base64
+        3.2  截图工具(dom-to-image),吃内存 吃内存 吃内存重要的事情说三遍，
+        3.3  测试了一下 大概生成200多页也就是400多张缺陷图片 需要 2-3G 只有关闭程序才会释放内存,暂时还未找到解决办法
+    4. 官网 https://github.com/dolanmiu/docx
+    5. api https://docx.js.org/#/ 基本的文本 图片 table 都可以实现 其他花里胡哨再等等吧
+    6. 所有示例 https://github.com/dolanmiu/docx/tree/master/demo   可以自己放在demo里面测试
+    7. https://github.com/Julycc41/react-electron-ts 自己写的小demo
+    8. 启动 1.yarn 2.yarn start 3.yarn ele 冲鸭

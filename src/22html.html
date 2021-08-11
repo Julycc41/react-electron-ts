@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        ::selection {
+          background: transparent;
+        }
+  
+        #container {
+          width: 100%;
+          height: 550px;
+          display: flex;
+        }
+  
+        .left {
+          width: 500px;
+          height: 100%;
+          border-right: 1px solid #ccc;
+  
+        }
+  
+        .left ul li {
+          list-style: none;
+          height: 50px;
+          text-align: center;
+          line-height: 50px;
+          border-bottom: 1px solid #eee;
+  
+          transition: 0.3s all ease-out;
+          cursor: pointer;
+        }
+  
+        .left ul li:hover {
+          background: cyan;
+        }
+  
+        .right {
+          flex: 1;
+          height: 100%;
+        }
+      </style>
+  
+      <div id="container">
+        <div class="left">
+          <ul id="main">
+            <li data-index="0">这是按住shift键多选测试0</li>
+            <li data-index="1">这是按住shift键多选测试1</li>
+            <li data-index="2">这是按住shift键多选测试2</li>
+            <li data-index="3">这是按住shift键多选测试3</li>
+            <li data-index="4">这是按住shift键多选测试4</li>
+            <li data-index="5">这是按住shift键多选测试5</li>
+          </ul>
+        </div>
+        <div class="right"></div>
+      </div>
+  
+      <script>
+        let selectedIds = []; //存放被选中的数据
+        let preIdx = 0; //被选中的数组的第一个值，用以比较范围
+  
+        let ul = document.getElementById("main");
+        let lis = document.getElementsByTagName("li");
+  
+        ul.addEventListener(
+          "click",
+          function (event) {
+            selectedIds = [];
+            let target = event.target;
+            let idx = target.dataset.index;
+  
+            if (event.shiftKey) {
+              let max = Math.max(preIdx, idx);
+              let min = Math.min(preIdx, idx);
+              for (let j = min; j <= max; j++) {
+                selectedIds.push(j);
+              }
+              for (let i = 0; i < lis.length; i++) {
+                let itemIdx = selectedIds.findIndex((c) => c == i);
+                if (itemIdx > -1) {
+                  lis[i].style.background = "cyan";
+                } else {
+                  lis[i].style.background = "transparent";
+                }
+              }
+            } else {
+              for (let i = 0; i < lis.length; i++) {
+                if (i == idx) {
+                  lis[idx].style.background = "cyan";
+                } else {
+                  lis[i].style.background = "transparent";
+                }
+              }
+              selectedIds.push(idx);
+              preIdx = idx;
+            }
+  
+            console.log(selectedIds);
+          },
+          false
+        );
+      </script>
+</body>
+</html>
