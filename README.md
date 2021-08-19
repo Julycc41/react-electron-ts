@@ -14,4 +14,5 @@
     5. api https://docx.js.org/#/ 基本的文本 图片 table 都可以实现 其他花里胡哨再等等吧
     6. 所有示例 https://github.com/dolanmiu/docx/tree/master/demo   可以自己放在demo里面测试
     7. https://github.com/Julycc41/react-electron-ts 自己写的小demo
-    8. 启动 1.yarn 2.yarn start 3.yarn ele 冲鸭
+    8. 启动 1.yarn 2.yarn start 3.yarn ele 起步就像数123一样容易 冲鸭
+
