@@ -5,15 +5,16 @@ import { OperationControl, PlaneControl } from "../../typings/interface";
 import "./RealTimeControl.scss";
 
 export const RealTimeControl = observer(() => {
-  const [currentSelectControl, setCurrentSelectControl] = useState<string | null>(null);
+  const [currentSelectControl, setCurrentSelectControl] = useState<
+    string | null
+  >(null);
   const [photoTakingCount, setPhotoTakingCount] = useState(0);
   let [zoomParams, setZoomParams] = useState(0); //当前变倍档位
   let [actionValue, setActionValue] = useState(0); //当前控制机身角度值
   let [ptzParams, setPtzParams] = useState(-90); //当前云台角度
   const currentCount = 5; //每次调整的数量
-
+  const [state, setstate] = useState(0);
   const changeCurrentSelectControl = (controlKey: string, type: string) => {
-
     setCurrentSelectControl(controlKey);
     let droneHandType: any = {};
     let move: any = {};
@@ -85,12 +86,19 @@ export const RealTimeControl = observer(() => {
       setZoomParams(zoomParams);
       console.log("缩小", zoomParams);
     }
-    console.log(action, droneHandType)
+    console.log(action, droneHandType);
   };
 
+  async function getMoney() {
+    for (let i = 0; i < 30; i++) {
+      await setstate(i);
+    }
+  }
 
   return useObserver(() => (
     <div className="real-time-control-wrapper">
+      <div onClick={getMoney}>a加加加</div>
+      <div>{state}</div>
       <div className="control-wrapper">
         <div className="control-slider-wrapper">
           <div className="control-direction">
@@ -99,24 +107,34 @@ export const RealTimeControl = observer(() => {
                 className={[
                   `iconfont icon-${itemType.type}`,
                   itemType.index,
-                  currentSelectControl === itemType.index ? "control-active" : "",
+                  currentSelectControl === itemType.index
+                    ? "control-active"
+                    : "",
                 ].join(" ")}
                 key={itemType.index}
-                onClick={() => changeCurrentSelectControl(itemType.index, itemType.type)}
+                onClick={() =>
+                  changeCurrentSelectControl(itemType.index, itemType.type)
+                }
               ></div>
             ))}
           </div>
+
           <div className="control-operation">
             {OPERATION_CONTROL.map((itemType) => (
               <span
                 className={[
                   `iconfont icon-${itemType.type}`,
-                  currentSelectControl === itemType.index ? "control-active" : "",
+                  currentSelectControl === itemType.index
+                    ? "control-active"
+                    : "",
                 ].join(" ")}
                 key={itemType.index}
-                onClick={() => changeCurrentSelectControl(itemType.index, itemType.type)}
+                onClick={() =>
+                  changeCurrentSelectControl(itemType.index, itemType.type)
+                }
               >
-                {itemType.index === OperationControl.xiangji && photoTakingCount !== 0 && <b>{photoTakingCount}</b>}
+                {itemType.index === OperationControl.xiangji &&
+                  photoTakingCount !== 0 && <b>{photoTakingCount}</b>}
               </span>
             ))}
           </div>

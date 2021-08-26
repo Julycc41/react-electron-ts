@@ -1,145 +1,176 @@
-import {
-
-  OperationControl,
-  PlaneControl
-} from "../../typings/interface";
+import { OperationControl, PlaneControl } from '../../typings/interface'
 
 export const PLANE_CONTROL = [
   {
-    name: "左上",
-    type: "zuoshang",
-    index: PlaneControl.zuoshang,
+    name: '左上',
+    type: 'zuoshang',
+    index: PlaneControl.zuoshang
   },
   {
-    name: "上",
-    type: "shang",
-    index: PlaneControl.shang,
+    name: '上',
+    type: 'shang',
+    index: PlaneControl.shang
   },
   {
-    name: "右上",
-    type: "youshang",
-    index: PlaneControl.youshang,
+    name: '右上',
+    type: 'youshang',
+    index: PlaneControl.youshang
   },
   {
-    name: "右",
-    type: "you",
-    index: PlaneControl.you,
+    name: '右',
+    type: 'you',
+    index: PlaneControl.you
   },
   {
-    name: "刷新",
-    type: "shuaxin",
-    index: PlaneControl.shuaxin,
+    name: '刷新',
+    type: 'shuaxin',
+    index: PlaneControl.shuaxin
   },
   {
-    name: "左",
-    type: "zuo",
-    index: PlaneControl.zuo,
+    name: '左',
+    type: 'zuo',
+    index: PlaneControl.zuo
   },
   {
-    name: "左下",
-    type: "107fangxiang_zuoxia",
-    index: PlaneControl["107fangxiang_zuoxia"],
+    name: '左下',
+    type: '107fangxiang_zuoxia',
+    index: PlaneControl['107fangxiang_zuoxia']
   },
   {
-    name: "下",
-    type: "xia",
-    index: PlaneControl.xia,
+    name: '下',
+    type: 'xia',
+    index: PlaneControl.xia
   },
   {
-    name: "右下",
-    type: "youxia",
-    index: PlaneControl.youxia,
-  },
-];
+    name: '右下',
+    type: 'youxia',
+    index: PlaneControl.youxia
+  }
+]
 export const OPERATION_CONTROL = [
   {
-    name: "放大",
-    type: "fangda",
-    index: OperationControl.fangda,
+    name: '放大',
+    type: 'fangda',
+    index: OperationControl.fangda
   },
   {
-    name: "拍照",
-    type: "xiangji",
-    index: OperationControl.xiangji,
+    name: '拍照',
+    type: 'xiangji',
+    index: OperationControl.xiangji
   },
   {
-    name: "缩小",
-    type: "suoxiao",
-    index: OperationControl.suoxiao,
-  },
-];
+    name: '缩小',
+    type: 'suoxiao',
+    index: OperationControl.suoxiao
+  }
+]
 
-export const waypointList=[
+export const waypointList = [
   {
-    id:1,
-    time:Math.round(Math.random()*80+20),
-    imageList:[
+    id: 1,
+    time: Math.round(Math.random() * 80 + 20),
+    imageList: [
       {
-        id:1,
-        src:"https://img-blog.csdnimg.cn/20201014180756927.png?x-oss-process=image/resize,m_fixed,h_64,w_64"
+        id: 1,
+        src: 'https://img-blog.csdnimg.cn/20201014180756927.png?x-oss-process=image/resize,m_fixed,h_64,w_64'
       },
       {
-        id:2,
-        src:"https://img-blog.csdnimg.cn/20201014180756925.png?x-oss-process=image/resize,m_fixed,h_64,w_64"
+        id: 2,
+        src: 'https://img-blog.csdnimg.cn/20201014180756925.png?x-oss-process=image/resize,m_fixed,h_64,w_64'
       },
       {
-        id:3,
-        src:"https://img-blog.csdnimg.cn/20201014180756927.png?x-oss-process=image/resize,m_fixed,h_64,w_64"
+        id: 3,
+        src: 'https://img-blog.csdnimg.cn/20201014180756927.png?x-oss-process=image/resize,m_fixed,h_64,w_64'
       }
     ]
   },
   {
-    id:2,
-    time:Math.round(Math.random()*80+20),
-    imageList:[
+    id: 2,
+    time: Math.round(Math.random() * 80 + 20),
+    imageList: [
       {
-        id:1,
-        src:"https://img-blog.csdnimg.cn/20201014180756927.png?x-oss-process=image/resize,m_fixed,h_64,w_64"
+        id: 1,
+        src: 'https://img-blog.csdnimg.cn/20201014180756927.png?x-oss-process=image/resize,m_fixed,h_64,w_64'
       },
       {
-        id:2,
-        src:"https://img-blog.csdnimg.cn/20201014180756925.png?x-oss-process=image/resize,m_fixed,h_64,w_64"
+        id: 2,
+        src: 'https://img-blog.csdnimg.cn/20201014180756925.png?x-oss-process=image/resize,m_fixed,h_64,w_64'
       },
       {
-        id:3,
-        src:"https://img-blog.csdnimg.cn/20201014180756927.png?x-oss-process=image/resize,m_fixed,h_64,w_64"
+        id: 3,
+        src: 'https://img-blog.csdnimg.cn/20201014180756927.png?x-oss-process=image/resize,m_fixed,h_64,w_64'
       }
     ]
   },
   {
-    id:3,
-    time:Math.round(Math.random()*80+20),
-    imageList:[
+    id: 3,
+    time: Math.round(Math.random() * 80 + 20),
+    imageList: [
       {
-        id:1,
-        src:"https://img-blog.csdnimg.cn/20201014180756927.png?x-oss-process=image/resize,m_fixed,h_64,w_64"
+        id: 1,
+        src: 'https://img-blog.csdnimg.cn/20201014180756927.png?x-oss-process=image/resize,m_fixed,h_64,w_64'
       },
       {
-        id:2,
-        src:"https://img-blog.csdnimg.cn/20201014180756925.png?x-oss-process=image/resize,m_fixed,h_64,w_64"
+        id: 2,
+        src: 'https://img-blog.csdnimg.cn/20201014180756925.png?x-oss-process=image/resize,m_fixed,h_64,w_64'
       },
       {
-        id:3,
-        src:"https://img-blog.csdnimg.cn/20201014180756927.png?x-oss-process=image/resize,m_fixed,h_64,w_64"
+        id: 3,
+        src: 'https://img-blog.csdnimg.cn/20201014180756927.png?x-oss-process=image/resize,m_fixed,h_64,w_64'
       }
     ]
   },
   {
-    id:4,
-    time:Math.round(Math.random()*80+20),
-    imageList:[
+    id: 4,
+    time: Math.round(Math.random() * 80 + 20),
+    imageList: [
       {
-        id:1,
-        src:"https://img-blog.csdnimg.cn/20201014180756927.png?x-oss-process=image/resize,m_fixed,h_64,w_64"
+        id: 1,
+        src: 'https://img-blog.csdnimg.cn/20201014180756927.png?x-oss-process=image/resize,m_fixed,h_64,w_64'
       },
       {
-        id:2,
-        src:"https://img-blog.csdnimg.cn/20201014180756925.png?x-oss-process=image/resize,m_fixed,h_64,w_64"
+        id: 2,
+        src: 'https://img-blog.csdnimg.cn/20201014180756925.png?x-oss-process=image/resize,m_fixed,h_64,w_64'
       },
       {
-        id:3,
-        src:"https://img-blog.csdnimg.cn/20201014180756927.png?x-oss-process=image/resize,m_fixed,h_64,w_64"
+        id: 3,
+        src: 'https://img-blog.csdnimg.cn/20201014180756927.png?x-oss-process=image/resize,m_fixed,h_64,w_64'
       }
     ]
+  }
+]
+
+export const shiftLIst = [
+  {
+    name: '我是第1位',
+    type: '1'
+  },
+  {
+    name: '我是第2位',
+    type: '2'
+  },
+  {
+    name: '我是第3位',
+    type: '3'
+  },
+  {
+    name: '我是第4位',
+    type: '4'
+  },
+  {
+    name: '我是第5位',
+    type: '5'
+  },
+  {
+    name: '我是第6位',
+    type: '6'
+  },
+  {
+    name: '我是第7位',
+    type: '7'
+  },
+  {
+    name: '我是第8位',
+    type: '8'
   }
 ]
