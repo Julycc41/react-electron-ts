@@ -8,38 +8,35 @@ import WindowBar from './component/WindowBar'
 import { readFileStream } from './readFile'
 function App() {
   const [preIdx, setPreIdx] = useState(0)
-  const [dataList, setDataList] = useState(shiftLIst.map(item => ({ ...item, checked: false })))
+  const [current, setCurrent] = useState<any>([])
   function ulclick(type: any, event: any) {
-    const idx = dataList.findIndex(item => item.type === type)
+    const idx = shiftLIst.findIndex(item => item.type === type)
     if (event.shiftKey) {
       let max = Math.max(preIdx, idx)
       let min = Math.min(preIdx, idx)
-      const list = dataList.map((item, index) => ({ ...item, checked: index >= min && index <= max ? true : false }))
-      setDataList(list)
+      const list = shiftLIst.map((item, index) => (index >= min && index <= max ? item.type : false)).filter(item => item)
+      setCurrent(list)
     } else {
-      const list = dataList.map((item, index) => ({ ...item, checked: index === idx ? true : false }))
-      setDataList(list)
       setPreIdx(idx)
+      setCurrent([shiftLIst[idx].type])
     }
   }
+
   return (
     <div className="App">
       <WindowBar leftContent="无人机智能巡检系统" />
       <div onClick={() => createFile()}>生成文件</div>
       <div onClick={() => readFileStream('C:/Users/caper/Desktop/code-work/desktop-solar-plant/resource/69/task/585.zip')}>读取文件</div>
-      <div id="container">
-        <div className="left">
-          {dataList.map((item, index) => {
-            return (
-              <p onClick={e => ulclick(item.type, e)}>
-                <Checkbox data-index={index} checked={item.checked} value={item.name}>
-                  {item.name}
-                </Checkbox>
-              </p>
-            )
-          })}
-        </div>
-        <div className="right"></div>
+      <div className="App">
+        {shiftLIst.map((item: any, index: any) => {
+          return (
+            <p onClick={e => ulclick(item.type, e)}>
+              <Checkbox data-index={index} checked={current.includes(item.type)} value={item.name}>
+                {item.name}
+              </Checkbox>
+            </p>
+          )
+        })}
       </div>
       {/* <RealTimeControl></RealTimeControl> */}
       <GetImage />
